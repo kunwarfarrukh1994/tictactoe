@@ -1,0 +1,15 @@
+ <div class="container">
+      <div id="statusArea" className="status">Turn of Player: <span>{{this.aP}}</span></div>
+       <div id="winnerArea" className="winner">Winner: 
+        <span *ngIf="winner==null">None</span>
+        <span *ngIf="winner">{{winner}}</span>
+      </div>
+        <div class="resetBtn" (click)="reset()" >Reset</div>
+      <section>
+       <div class="board row">
+           <button (click)="moveTriggered(squares,i)"  *ngFor="let square of squares;let i=index" >
+           {{square}}</button>
+       </div>
+        </section>
+</div>
+   
